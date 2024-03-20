@@ -24,15 +24,15 @@ public class ReverseListNode {
             return;
         }
 
-        ListNode listNode = head.next;
-        ListNode temp = null;
-        ListNode next;
+        ListNode listNode = head.next;//头节点不能动所以使用第一个新指针来指代头节点的下一位
+        ListNode temp = null;//定义一个新的链表
+        ListNode next;//使用第二个新指针来指代head.next的下一位
 
-        while (listNode != null) {
-            next = listNode.next;
-            listNode.next = temp;
-            temp = listNode;
-            listNode = next;
+        while (listNode != null) {//循环判断
+            next = listNode.next;//next指针指向原链表头结点的下一位的下一位
+            listNode.next = temp;//头结点的下一位的next域指向新链表的头节点下一位null
+            temp = listNode;//temp成为新链表的头节点
+            listNode = next;//原链表的头节点指向next指针
         }
         System.out.println(temp);
     }
