@@ -35,6 +35,7 @@ public class ReverseListNode {
             listNode = next;//原链表的头节点指向next指针
         }
         System.out.println(temp);
+        System.out.println();
     }
 }
 class ListNode {
