@@ -3,6 +3,8 @@ package 链表;
  *
  * @param: 链表的反转
  * @date: 2024/3/20 10:33
+ * 思路：头插法利用双指针交替指向将链表反转
+ * 时间复杂度为O(n),n为链表的长度，需要遍历链表一次
  */
 
 public class ReverseListNode {
