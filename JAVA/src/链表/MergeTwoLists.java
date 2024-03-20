@@ -1,6 +1,6 @@
 package 链表;
+
 /**
- *
  * @param: 合并两个有序链表
  * @date: 2024/3/20 16:42
  * 思路：同时迭代对比两个链表并按照大小进行排序合成新的链表
@@ -15,18 +15,20 @@ public class MergeTwoLists {
         ListNode list2Node1 = new ListNode(1);
         ListNode list2Node2 = new ListNode(3);
         ListNode list2Node3 = new ListNode(4);
+        ListNode list2Node4 = new ListNode(5);
         list1Node1.next = list1Node2;
         list1Node2.next = list1Node3;
 
         list2Node1.next = list2Node2;
         list2Node2.next = list2Node3;
+        list2Node3.next = list2Node4;
 
         mergeTwoLists(list1Node1, list2Node1);
     }
 
     public static void mergeTwoLists(ListNode list1, ListNode list2) {
 
-        ListNode dum = new ListNode(0),cur = dum;//定义新链表的头节点并用指针指代
+        ListNode dum = new ListNode(0), cur = dum;//定义新链表的头节点并用指针指代
         while (list1 != null && list2 != null) {//循环判断条件为当两个链表都不为空时跳出循环
             if (list1.val < list2.val) {//迭代对比链表数据并成为新链表的节点
                 cur.next = list1;
