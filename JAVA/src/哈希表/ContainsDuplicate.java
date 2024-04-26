@@ -46,10 +46,10 @@ public class ContainsDuplicate {
     //Hashset集合
     public static boolean containsDuplicate2(int[] nums) {
 
-        HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> setmap = new HashSet<>();
 
         for (int num : nums) {
-            if (!set.add(num)) {
+            if (!setmap.add(num)) {
                 return true;
             }
         }
