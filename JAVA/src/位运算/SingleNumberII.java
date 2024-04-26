@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- *@ClassName SingleNumberII
+ *@ClassName SingleNumberII 只出现一次的数字II
  *@Author Freie  stellen
  *@Date 2024/4/26 10:57
  */
 public class SingleNumberII {
     public static void main(String[] args) {
-        int number1 = singleNumber1(new int[]{1, 2, 2});
+        int number1 = singleNumber1(new int[]{1, 2, 2, 2, 3, 3, 3});
         System.out.println(number1);
         int number2 = singleNumber2(new int[]{1, 2, 2, 2});
         System.out.println(number2);
@@ -18,11 +18,16 @@ public class SingleNumberII {
 
     public static int singleNumber1(int[] nums) {
 
-        int temp = 0;
-        for (int num : nums) {
-            temp ^= num;
+        int ans = 0;
+        for (int i = 0; i < 32; i++) {
+            int cnt1 = 0;
+            for (int x : nums) {
+                cnt1 += x >> i & 1;
+            }
+            ans |= cnt1 % 3 << i;
         }
-        return temp;
+        return ans;
+
     }
 
     //Hash表法
