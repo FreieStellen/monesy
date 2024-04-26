@@ -1,4 +1,4 @@
-package 数组;
+package 位运算;
 
 /*
  *@ClassName SingleNumber 只出现一次的数字
