@@ -1,4 +1,4 @@
-package 哈希表;
+package 数组;
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 每个出现了多少次。在遍历第二个字符串进行减减操作，如果出现某个次数为负数则证明两个字符串中字母出现的次数不同
  * 时间复杂度o(n+n)——————空间复杂度：o（26）
  * 思路2：将两个字符串转换为数组在进行排序在对比
- * 时间复杂度：o（nlog2n）————————空间复杂度：
+ * 时间复杂度：o（nlog2n）————————空间复杂度：O(logn)
  */
 public class IsAnagram {
     public static void main(String[] args) {
