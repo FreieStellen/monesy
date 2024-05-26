@@ -10,12 +10,12 @@ package 字符串;
 public class longestPalindrome {
     public static void main(String[] args) {
 
-        String reverse2 = longestPalindrome2("bcacbad");
-        System.out.println(reverse2);
+        String reverse1 = longestPalindrome1("bcacbad");
+        System.out.println(reverse1);
     }
 
     //中心扩展法
-    public static String longestPalindrome2(String s) {
+    public static String longestPalindrome1(String s) {
 
         //1.定义三个变量作为载体
         String a;
