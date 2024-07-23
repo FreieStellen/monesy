@@ -1,4 +1,4 @@
-package 哈希表;
+package 集合;
 
 import java.util.HashSet;
 
