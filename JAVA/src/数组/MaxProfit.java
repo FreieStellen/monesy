@@ -13,9 +13,8 @@ public class MaxProfit {
 
     public static void main(String[] args) {
 
-        int profit = maxProfit(new int[]{7, 1, 5, 3, 9, 4});
-
-        System.out.println(profit);
+        int profit1 = maxProfit(new int[]{7, 1, 5, 3, 9, 4});
+        System.out.println(profit1);
     }
 
     public static int maxProfit(int[] prices) {
@@ -39,4 +38,25 @@ public class MaxProfit {
         }
         return maxprice;
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
